@@ -62,15 +62,15 @@ module Librevox
 
       headers
     end
-  end
 
-  private
+    private
 
-  def check_connection
-    begin
-      numread = @socket.recvfrom_nonblock(1)
-      raise "Connection closed??" if numread[0] == ""
-    rescue Errno::EAGAIN => ex
+    def check_connection
+      begin
+        numread = @socket.recvfrom_nonblock(1)
+        raise "Connection closed??" if numread[0] == ""
+      rescue Errno::EAGAIN => ex
+      end
     end
   end
 end
