@@ -31,13 +31,13 @@ module Librevox
       end
       @socket.connect(Socket.pack_sockaddr_in(@port, addr[0][3]))
 
-      @socket.send "auth #{@auth}\n\n"
+      @socket.print "auth #{@auth}\n\n"
       read_response
     end
 
     def command *args
       check_connection
-      @socket.send "#{super(*args)}\n\n"
+      @socket.print "#{super(*args)}\n\n"
       read_response
     end
 
