@@ -1,13 +1,13 @@
 Gem::Specification.new do |s|
   s.name     = "librevox"
-  s.version  = "0.3"
-  s.date     = "2010-09-30"
+  s.version  = "0.3.1"
+  s.date     = "2011-07-12"
   s.summary  = "Ruby library for interacting with FreeSWITCH."
   s.email    = "harry@vangberg.name"
   s.homepage = "http://github.com/vangberg/librevox"
   s.description = "EventMachine-based Ruby library for interacting with the
 open source telephony platform FreeSwitch."
-  s.authors  = ["Harry Vangberg"]
+  s.authors  = ["Harry Vangberg", "Lasse Klok Mikkelsen"]
   s.files    = [
     "README.md",
     "LICENSE",
