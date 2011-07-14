@@ -6,7 +6,7 @@ require 'librevox/listener/outbound'
 require 'librevox/command_socket'
 
 module Librevox
-  VERSION = "0.3"
+  VERSION = "0.3.1"
 
   def self.options
     @options ||= {
@@ -22,6 +22,9 @@ module Librevox
   def self.logger!
     logger = Logger.new(options[:log_file])
     logger.level = options[:log_level]
+    logger.formatter = proc do |severity, datetime, progname, msg|
+      "#{datetime} : #{progname} : #{severity} : #{msg}\n"
+    end
     logger
   end
 
